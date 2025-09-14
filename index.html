@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security Professional | Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #0a192f;
+            --secondary-color: #64ffda;
+            --text-color: #8892b0;
+            --light-text: #ccd6f6;
+            --dark-bg: #020c1b;
+        }
+        
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--light-text);
+            font-weight: 700;
+        }
+        
+        .text-highlight {
+            color: var(--secondary-color);
+        }
+        
+        .navbar {
+            background-color: rgba(10, 25, 47, 0.9);
+            padding: 1.2rem 0;
+        }
+        
+        .navbar-brand {
+            color: var(--secondary-color) !important;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .nav-link {
+            color: var(--light-text) !important;
+            margin-left: 1.5rem;
+            font-weight: 500;
+        }
+        
+        .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+        
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 0 5rem;
+        }
+        
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-content h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+        
+        .btn-outline-primary {
+            color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            border-radius: 4px;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: rgba(100, 255, 218, 0.1);
+        }
+        
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .about-content {
+            font-size: 1.1rem;
+        }
+        
+        .skill-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        
+        .progress {
+            height: 8px;
+            background-color: rgba(136, 146, 176, 0.2);
+            border-radius: 4px;
+        }
+        
+        .progress-bar {
+            background-color: var(--secondary-color);
+        }
+        
+        .service-card {
+            background-color: rgba(2, 12, 27, 0.7);
+            padding: 2rem;
+            border-radius: 5px;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-card {
+            background-color: rgba(2, 12, 27, 0.7);
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-img {
+            height: 200px;
+            background-color: #0c1727;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .project-content {
+            padding: 1.5rem;
+        }
+        
+        .project-tech {
+            margin: 1rem 0;
+        }
+        
+        .tech-tag {
+            display: inline-block;
+            background-color: rgba(100, 255, 218, 0.1);
+            color: var(--secondary-color);
+            padding: 0.2rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-info {
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-icon {
+            color: var(--secondary-color);
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        footer {
+            background-color: var(--dark-bg);
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .social-links a {
+            color: var(--light-text);
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Cyber Shield</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h4>Hello, I'm</h4>
+                        <h1>Khalid <span class="text-highlight">Mohamed</span></h1>
+                        <h2>Cyber Security Specialist</h2>
+                        <p>I specialize in protecting digital assets and infrastructure from cyber threats. With years of experience in vulnerability assessment, network security, and incident response, I help organizations build resilient security postures.</p>
+                        <a href="#contact" class="btn btn-outline-primary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="/home/kali/website/profile/IMG20240215201128.jpg" alt="Cyber security professional working on multiple screens showing security dashboards and code" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <p>I am a dedicated cybersecurity professional with over 8 years of experience in the field. My journey began with a fascination for how systems work and how they can be protected from malicious actors.</p>
+                        <p>Throughout my career, I've helped organizations of all sizes strengthen their security posture, from conducting penetration tests to implementing robust security protocols and training staff on security best practices.</p>
+                        <p>My approach combines technical expertise with strategic thinking to create comprehensive security solutions that address both current threats and future challenges.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="/home/kali/website/profile/IMG20240215201128.jpg" alt="Close-up portrait of a cybersecurity professional in a modern office environment" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" style="background-color: var(--dark-bg);">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Network Security</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Vulnerability Assessment</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Incident Response</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 88%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Cloud Security</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Security Auditing</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Cryptography</span>
+                            <span>87%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 87%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Services</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h3>Vulnerability Assessment</h3>
+                        <p>Comprehensive analysis of your systems to identify and prioritize security vulnerabilities before they can be exploited.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="bi bi-bug"></i>
+                        </div>
+                        <h3>Penetration Testing</h3>
+                        <p>Simulated cyber attacks on your systems to evaluate the security of your infrastructure and applications.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="bi bi-person-badge"></i>
+                        </div>
+                        <h3>Security Training</h3>
+                        <p>Customized training programs to educate your team on cybersecurity best practices and threat awareness.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" style="background-color: var(--dark-bg);">
+        <div class="container">
+            <h2 class="section-title">Recent Projects</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8564fc1b-eb2c-4e92-b3fd-e647096da894.png" alt="Financial network security dashboard showing real-time threat monitoring" class="img-fluid">
+                        </div>
+                        <div class="project-content">
+                            <h3>Financial Institution Security Overhaul</h3>
+                            <p>Designed and implemented a comprehensive security framework for a major banking institution.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Firewalls</span>
+                                <span class="tech-tag">SIEM</span>
+                                <span class="tech-tag">Encryption</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bddd6f68-f46b-4694-abd7-ff82825d8865.png" alt="Healthcare data protection system with encryption visualization" class="img-fluid">
+                        </div>
+                        <div class="project-content">
+                            <h3>Healthcare Data Protection</h3>
+                            <p>Developed a secure data handling system for patient records in compliance with HIPAA regulations.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Data Encryption</span>
+                                <span class="tech-tag">Access Controls</span>
+                                <span class="tech-tag">Audit Logging</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/eb76d122-3607-4eec-a50c-39bfba2f9038.png" alt="E-commerce security infrastructure with secure payment gateway" class="img-fluid">
+                        </div>
+                        <div class="project-content">
+                            <h3>E-commerce Security Infrastructure</h3>
+                            <p>Built a secure payment processing system for an online retail platform handling millions of transactions.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">PCI DSS</span>
+                                <span class="tech-tag">Tokenization</span>
+                                <span class="tech-tag">Fraud Detection</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="contact-info">
+                        <p><i class="bi bi-geo-alt-fill contact-icon"></i> San Francisco, CA</p>
+                        <p><i class="bi bi-envelope-fill contact-icon"></i> alex.morgan@cybershield.com</p>
+                        <p><i class="bi bi-phone-fill contact-icon"></i> +1 (555) 123-4567</p>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-outline-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links mb-4">
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-github"></i></a>
+                <a href="#"><i class="bi bi-twitter"></i></a>
+            </div>
+            <p>© 2023 Alex Morgan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
